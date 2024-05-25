@@ -1,0 +1,76 @@
+ul {
+  list-style: none;
+}
+
+h3 {
+  margin: 0;
+}
+
+.container {
+  width: 700px;
+  padding: 50px 20px;
+  margin: 0 auto;
+  background-color: rgb(197, 190, 190);
+}
+
+.header {
+  font-size: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.item {
+  display: flex;
+  gap: 50px;
+}
+
+.item__link {
+  font-size: 40px;
+  color: rgb(247, 16, 158);
+}
+
+.item__price {
+  font-size: 40px;
+}
+
+.item__text {
+  font-size: 40px;
+  color: rgb(194, 189, 189) y;
+}
+
+.desription {
+  font-size: 40px;
+  margin-left: 40px;
+}
+
+.form {
+  margin-left: 90px;
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+}
+
+.select {
+  height: 50px;
+  font-size: 20px;
+}
+
+.button {
+  margin-top: 70px;
+  font-size: 50px;
+  color: #fff;
+  border: 0px;
+  border-radius: 20px;
+  padding: 30px 50px;
+  background-color: rgb(247, 16, 158);
+}
+
+.button:hover {
+  cursor: pointer;
+}

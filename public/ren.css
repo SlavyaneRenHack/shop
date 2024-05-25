@@ -1,0 +1,47 @@
+.header__div {
+  display: flex;
+  padding-top: 30px;
+  padding-left: 70px;
+  gap: 25px;
+  font-size: 28px;
+  margin-bottom: 200px;
+}
+
+.header__Payments {
+  color: grey;
+}
+
+.header__icon {
+  display: inline-block;
+  background-image: url(./icon1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateY(35px);
+  width: 40px;
+  height: 40px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1170px;
+}
+
+input {
+  width: 593px;
+  margin-left: 325px;
+  border: 0;
+  text-align: center;
+  border-bottom: 2px solid rgb(247, 16, 158);
+  font-size: 35px;
+}
+
+.button {
+  color: white;
+  margin-top: 40px;
+  margin-left: 325px;
+  background-color: rgb(247, 16, 158);
+  padding: 35px 200px;
+  border: 0px;
+  font-size: 45px;
+  border-radius: 20px;
+}

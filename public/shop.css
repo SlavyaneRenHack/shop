@@ -1,0 +1,110 @@
+body {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: relative;
+}
+
+.list {
+  display: flex;
+  font-size: 20px;
+  margin-left: 100px;
+  gap: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  right: -611px;
+  display: inline-block;
+  background-image: url(./icon1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.link {
+  color: rgb(136, 136, 240);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.main__content {
+  padding: 20px;
+  background-color: rgb(237, 219, 253);
+}
+
+.main__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.main__Payment {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+.main__div {
+  margin-left: 10px;
+  width: 390px;
+  border-bottom: 2px solid rgb(134, 175, 221);
+  margin-bottom: 30px;
+}
+
+.div__icon {
+  display: inline-block;
+  background-image: url('./icon2.png');
+  background-size: cover;
+  transform: translateY(-16px);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.div {
+  gap: 10px;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.main__link {
+  display: inline-block;
+
+  background-color: rgb(181, 170, 245);
+  color: black;
+  padding: 15px 150px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+.main__description {
+  margin-left: 50px;
+  max-width: 350px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 60px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="shop.css"/>
+    <!-- <script src="shop.js"></script> -->
+    <script>
+    async function callPayEndpoint() {
+      try {
+        const response = fetch('/pay');
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }else{
+        	console.log("Response id OK!")
+        }
+        const data = response.data;
+        console.log('Token:', data);
+        alert('Token: ' + JSON.stringify(data));
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const button = document.getElementById('pay_button');
+      button.addEventListener('click', callPayEndpoint);
+    });
+  </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="list">
+          <li class="item"><a href="" class="link">Главная</a></li>
+          <li class="item"><a href="" class="link">Отзывы</a></li>
+          <li class="item"><a href="" class="link">Документы</a></li>
+        </ul>
+      </nav>
+      <a href=""><span class="icon"></span></a>
+    </header>
+    <main>
+      <div class="main__content">
+        <h2 class="header">Оплата</h2>
+        <ul class="main__list">
+          <li class="main__item">Название товара:</li>
+          <li class="main__item">Количество:</li>
+          <li class="main__item">Сумма:<input id="purchase_sum" class="input__class"></li>
+        </ul>
+        <p class="main__Payment">Способ оплаты:</p>
+        <div class="div">
+          <div class="main__div"><span id="token"></span></div>
+          <div class="div__icon"></div>
+        </div>
+        <button id="pay_button" class="main__link">Cгенерировать</button>
+        <p class="main__description">
+          Все права и конфиденциальные данные защищены
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
