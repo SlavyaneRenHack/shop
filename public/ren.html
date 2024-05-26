@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./ren.css" />
+    <script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const button = document.getElementById('button');
+        button.addEventListener('click', () => {
+          callPayClientEndpoint().then(() => {
+            window.location.href = `http://localhost:8001/ren_accept`;
+          });
+        });
+      });
+
+      function callPayClientEndpoint() {
+      try {
+          const token = document.getElementById('token').value;
+          console.log('Token from input', token)
+          const response = fetch('/client_pay?token=' + token); // Wait for the fetch to complete
+        } catch (error) {
+          console.error('Error:', error);
+        }
+    }
+
+
+    </script>
   </head>
   <body>
     <header>
@@ -15,10 +38,8 @@
     </header>
     <main>
       <div class="container">
-        <form action="">
-          <input class="input" type="text" placeholder="Токен..." />
-          <button class="button">Оплатить</button>
-        </form>
+          <input id="token" class="input" type="text" placeholder="Токен..." />
+          <a class="button" href="/ren_accept.html">Оплатить</a>
       </div>
     </main>
   </body>

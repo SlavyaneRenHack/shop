@@ -8,19 +8,15 @@
     <!-- <script src="shop.js"></script> -->
     <script>
     async function callPayEndpoint() {
-      try {
-        const response = fetch('/pay');
-        if (!response.ok) {
-          throw new Error('Network response was not ok ' + response.statusText);
-        }else{
-        	console.log("Response id OK!")
-        }
-        const data = response.data;
-        console.log('Token:', data);
-        alert('Token: ' + JSON.stringify(data));
-      } catch (error) {
-        console.error('Error:', error);
-      }
+    	try {
+        	const response = await fetch('/pay'); // Wait for the fetch to complete
+        	const data = await response.text(); // Parse the JSON from the response
+        	console.log('Token:', data);
+        	const token = document.getElementById('token');
+        	token.innerText = data
+      	} catch (error) {
+        	console.error('Error:', error);
+      	}
     }
 
     document.addEventListener('DOMContentLoaded', (event) => {
@@ -44,11 +40,11 @@
       <div class="main__content">
         <h2 class="header">Оплата</h2>
         <ul class="main__list">
-          <li class="main__item">Название товара:</li>
-          <li class="main__item">Количество:</li>
-          <li class="main__item">Сумма:<input id="purchase_sum" class="input__class"></li>
+          <li class="main__item">Название товара: Блок питания Блок питания 200W/5V/40A</li>
+          <li class="main__item">Количество: 1</li>
+          <li class="main__item">Сумма: 1500</li>
         </ul>
-        <p class="main__Payment">Способ оплаты:</p>
+        <p class="main__Payment">Способ оплаты: Токен</p>
         <div class="div">
           <div class="main__div"><span id="token"></span></div>
           <div class="div__icon"></div>
